@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>	
+	<script type="text/javascript" src="js/sesion.js"></script>
+    <script type="text/javascript" src="js/funciones.js"></script>
+    <link rel="stylesheet" href="/appCompleta_2/css/estilo.css">
+	
+
+</head>
+<body>
+    <section id="login">
+        <h1>Nebula</h1>
+        <form onsubmit="return login()"  method="POST">
+            <table>
+                <tr>
+                    <td><label for="idUsuario">Nombre usuario:</label></td>
+                    <td><input type="text" name="idUsuario" id="idUsuario" pattern="[a-zA-Z0-9]+" required></td>
+                </tr>
+                <tr>
+                    <td><label for="clave">Clave:</label></td>
+                    <td><input type="password" name="clave" id="clave" required></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Iniciar sesión">
+                        <p><a href="#" onclick="return mostrarRegistro()">¿No tienes cuenta? Regístrate</a></p>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+
+    <section id="registro" style="display:none">
+        <h2>Regístrate</h2>
+        <form onsubmit="return registrarUsuario()" method="POST" >
+            <table>
+                <tr>
+                    <td><label for="idUsuario">Nombre usuario:</label></td>
+                    <td><input class="elem-registro" type="text" name="idUsuario-registro" id="idUsuario-registro" pattern="[a-zA-Z0-9]+" required></td>
+                </tr>
+                <tr>
+                    <td><label for="nombre">Nombre:</label></td>
+                    <td><input class="elem-registro" type="text" name="nombre" id="nombre" pattern="[A-Za-z]+" required></td>
+                </tr>
+                <tr>
+                    <td><label for="apellido">Apellidos:</label></td>
+                    <td><input class="elem-registro" type="text" name="apellido" id="apellido" pattern="[A-Za-z]+" required></td>
+                </tr>
+                <tr>
+                    <td><label for="clave">Clave:</label></td>
+                    <td><input class="elem-registro" type="password" name="clave-registro" id="clave-registro" required></td>
+                </tr>
+                <tr>
+                    <td><label for="correo">Correo:</label></td>
+                    <td><input class="elem-registro" type="text" name="correo" id="correo" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required></td>
+                </tr>
+                <tr>
+                    <td><label for="fechaNac">Fecha de nacimiento:</label></td>
+                    <td><input class="elem-registro" type="date" name="fechaNac" id="fechaNac" required></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" name="registro" value="Registrarse">
+                        <p><a href="#" onclick="mostrarLogin()">¿Ya tienes cuenta? Inicia sesión</a></p>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+
+    <section id="principal" style="display:none">
+        <header id="cab_usuario">
+            <span id="nom_usuario"></span>
+            <a href="#" onclick="cargarCategorias();">Home</a>
+            <a href="#" onclick="cargarCarrito();">Carrito</a>
+            <a href="#" onclick="cargarPedidos();">Ver pedidos</a>
+            <a href="#" onclick="cerrarSesion();">Cerrar sesión</a>
+        </header>
+
+        <header id="cab_admin">
+            <span id="nom_admin"></span>
+            <a href="#" onclick="cargarEnlacesAdmin();">Home</a>
+            <a href="#" onclick="cargarUsuariosAdmin();">Usuarios</a>
+            <a href="#" onclick="cargarCategoriasAdmin();">Categorías</a>
+            <a href="#" onclick="cargarProductosAdmin();">Productos</a>
+            <a href="#" onclick="cargarPedidosAdmin();">Pedidos</a>
+            <a href="#" onclick="cerrarSesion();">Cerrar sesión</a>
+        </header>
+
+        <h2 id="titulo"></h2>
+        <section id="contenido">
+            
+        </section>
+    </section>
+    
+</body>
+</html>

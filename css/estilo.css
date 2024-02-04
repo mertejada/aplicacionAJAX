@@ -1,0 +1,94 @@
+*{
+    font-family: Helvetica, sans-serif;
+}
+
+/* Estilo para la tabla */
+table {
+    width: fit-content;
+    border-collapse: collapse;
+    border: 1px solid #dddddd;
+    margin-bottom: 20px; /* Espacio entre tablas */
+}
+
+/* Estilo para las celdas de la tabla */
+td, th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilo para las celdas de encabezado */
+th {
+    background-color: #f2f2f2; /* Color de fondo */
+}
+
+/* Estilo para las filas impares */
+tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Color de fondo alternativo */
+}
+
+/* Estilo para las filas al pasar el ratón */
+tr:hover {
+    background-color: #f2f2f2; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos para los campos de entrada */
+input{
+    width: 200px; /* Ancho fijo para los campos de entrada */
+    margin-bottom: 10px; /* Espacio entre los campos de entrada */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"]{
+    width: auto; /* Ancho automático para los botones */
+    cursor: pointer; /* Puntero de ratón al pasar por encima */
+    background-color: #1869ff; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+}
+
+/* Estilos para los select */
+select {
+    display: block; /* Hace que cada select aparezca en una línea nueva */
+    width: 200px; /* Ancho fijo para los select */
+    margin-bottom: 10px; /* Espacio entre los select */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilo para listas no ordenadas */
+ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding-left: 0; /* Quita el padding izquierdo por defecto */
+}
+
+/* Estilo para elementos de lista */
+li {
+    padding: 5px 0; /* Añade un espacio vertical entre elementos */
+    border-bottom: 1px solid #ccc; /* Añade una línea divisoria entre elementos */
+}
+
+/* Estilo para enlaces dentro de listas */
+li a {
+    text-decoration:solid; /* Quita el subrayado de los enlaces */
+    color: #333; /* Color de texto para los enlaces */
+    display: block; /* Los enlaces ocupan todo el ancho del elemento li */
+    padding: 5px; /* Añade un espacio alrededor del enlace */
+}
+
+/* Estilo para enlaces al pasar el ratón */
+li a:hover {
+    background-color: #f4f4f4; /* Cambia el fondo al pasar el ratón */
+}
+
+#gastosEnvio{
+    font-size: 0.8em;
+    color: #999;
+}
+
+
